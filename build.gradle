@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '7.7.0'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.7.0'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.3.1'
+    testImplementation group: 'org.slf4j', name: 'slf4j-nop', version: '2.0.5'
+}
+
+test {
+    useTestNG()
+}
